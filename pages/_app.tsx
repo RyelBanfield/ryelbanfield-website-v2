@@ -1,8 +1,11 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+/* eslint-disable react/jsx-props-no-spreading */
+import type { AppProps } from 'next/app';
+import { NextUIProvider } from '@nextui-org/react';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <NextUIProvider>
+    <Component {...pageProps} />
+  </NextUIProvider>
+);
 
-export default MyApp
+export default MyApp;
