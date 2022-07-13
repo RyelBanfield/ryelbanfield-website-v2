@@ -1,4 +1,5 @@
 import { useTheme as useNextTheme } from 'next-themes';
+import { motion } from 'framer-motion';
 
 import {
   Grid, Row, Switch, User, useTheme,
@@ -13,14 +14,16 @@ const Header = () => {
   return (
     <Grid.Container>
       <Grid xs={10}>
-        <User
-          name="Ryel Banfield"
-          src="/ProPic.png"
-          size="xl"
-          zoomed
-          pointer
-          description="Full-Stack Developer"
-        />
+        <motion.div whileHover={{ scale: 1.2 }}>
+          <User
+            name="Ryel Banfield"
+            src="/ProPic.png"
+            size="xl"
+            zoomed
+            pointer
+            description="Full-Stack Developer"
+          />
+        </motion.div>
       </Grid>
 
       <Grid xs={2}>

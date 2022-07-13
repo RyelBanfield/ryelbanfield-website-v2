@@ -37,7 +37,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
             },
           }}
           transition={{
-            default: { duration: 2 },
+            default: { duration: 1 },
           }}
         >
           <Component {...pageProps} />

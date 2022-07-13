@@ -43,8 +43,10 @@ module.exports = {
               ['^@'],
               // Packages starting with `~`
               ['^~'],
-              // Imports starting with `../`
-              ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+              // // Imports starting with `../`
+              // ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+              // Packages starting with `@/`
+              ['^@/'],
               // Imports starting with `./`
               ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
               // Style imports
