@@ -1,9 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import {
-  Text, Switch, useTheme, Row, Grid, Spacer, Container,
-} from '@nextui-org/react';
 import { useTheme as useNextTheme } from 'next-themes';
+
+import {
+  Container,
+  Grid, Row, Spacer, Switch, Text, useTheme,
+} from '@nextui-org/react';
+
 import { MoonIcon, SunIcon } from '../components/SwitchIcons';
 
 const Home: NextPage = () => {
@@ -35,13 +38,13 @@ const Home: NextPage = () => {
             </Row>
           </Grid>
 
-          {/* <Grid xs={12}>
+          <Grid xs={12}>
             <Text size={24}>Home</Text>
             <Spacer x={1} />
             <Text size={24}>Work</Text>
             <Spacer x={1} />
             <Text size={24}>Posts</Text>
-          </Grid> */}
+          </Grid>
         </Grid.Container>
       </Container>
     </>

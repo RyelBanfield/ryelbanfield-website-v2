@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
-import { NextUIProvider, createTheme } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { motion } from 'framer-motion';
+
+import { createTheme, NextUIProvider } from '@nextui-org/react';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   const lightTheme = createTheme({
