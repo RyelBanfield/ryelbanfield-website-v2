@@ -1,11 +1,49 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
-import { NextUIProvider } from '@nextui-org/react';
+import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { motion } from 'framer-motion';
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <NextUIProvider>
-    <Component {...pageProps} />
-  </NextUIProvider>
-);
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
+  const lightTheme = createTheme({
+    type: 'light',
+  });
+
+  const darkTheme = createTheme({
+    type: 'dark',
+  });
+
+  return (
+    <NextThemesProvider
+      defaultTheme="dark"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className,
+      }}
+    >
+      <NextUIProvider>
+        <motion.main
+          key={router.route}
+          initial="initial"
+          animate="animate"
+          variants={{
+            initial: {
+              opacity: 0,
+            },
+            animate: {
+              opacity: 1,
+            },
+          }}
+          transition={{
+            default: { duration: 2 },
+          }}
+        >
+          <Component {...pageProps} />
+        </motion.main>
+      </NextUIProvider>
+    </NextThemesProvider>
+  );
+};
 
 export default MyApp;

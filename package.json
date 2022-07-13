@@ -12,7 +12,9 @@
     "@mdx-js/loader": "^2.1.2",
     "@next/mdx": "^12.2.2",
     "@nextui-org/react": "^1.0.0-beta.9",
+    "framer-motion": "^6.4.3",
     "next": "12.2.2",
+    "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

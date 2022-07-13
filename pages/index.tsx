@@ -1,17 +1,51 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Text } from '@nextui-org/react';
+import {
+  Text, Switch, useTheme, Row, Grid, Spacer, Container,
+} from '@nextui-org/react';
+import { useTheme as useNextTheme } from 'next-themes';
+import { MoonIcon, SunIcon } from '../components/SwitchIcons';
 
-const Home: NextPage = () => (
-  <>
-    <Head>
-      <title>Create Next App</title>
-      <meta name="description" content="Ryel Banfield's website" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const Home: NextPage = () => {
+  const { setTheme } = useNextTheme();
+  const { isDark } = useTheme();
 
-    <Text h1>Hello World!</Text>
-  </>
-);
+  return (
+    <>
+      <Head>
+        <title>Ryel Banfield</title>
+        <meta name="description" content="Ryel Banfield's Personal Website & Blog" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Container>
+        <Grid.Container gap={2}>
+          <Grid xs={10}>
+            <Text h1>Ryel Banfield</Text>
+          </Grid>
+
+          <Grid xs={2}>
+            <Row justify="flex-end" align="center">
+              <Switch
+                checked={isDark}
+                onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')}
+                iconOff={<SunIcon filled size={24} height={24} width={24} label="Sun" />}
+                iconOn={<MoonIcon filled size={24} height={24} width={24} label="Moon" />}
+              />
+            </Row>
+          </Grid>
+
+          {/* <Grid xs={12}>
+            <Text size={24}>Home</Text>
+            <Spacer x={1} />
+            <Text size={24}>Work</Text>
+            <Spacer x={1} />
+            <Text size={24}>Posts</Text>
+          </Grid> */}
+        </Grid.Container>
+      </Container>
+    </>
+  );
+};
 
 export default Home;
