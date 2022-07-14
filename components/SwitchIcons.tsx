@@ -1,15 +1,23 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { React } from '@nextui-org/react';
+
+type Props = {
+  fill: string;
+  filled: boolean;
+  size: number;
+  height: number;
+  width: number;
+  label: string;
+};
 
 export const SunIcon = ({
-  fill = 'currentColor',
+  fill,
   filled,
   size,
   height,
   width,
   label,
   ...props
-}) => {
+}: Props) => {
   if (filled) {
     return (
       <svg
@@ -62,14 +70,14 @@ export const SunIcon = ({
 };
 
 export const MoonIcon = ({
-  fill = 'currentColor',
+  fill,
   filled,
   size,
   height,
   width,
   label,
   ...props
-}) => {
+}: Props) => {
   if (filled) {
     return (
       <svg

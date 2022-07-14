@@ -53,14 +53,11 @@ const Profile = () => {
           variants={firstLine}
           initial="hidden"
           animate="show"
-          whileHover={{ scale: 1.2 }}
         >
           <Text
             h1
             size={46}
-            css={{
-              textGradient: '45deg, $blue600 -20%, $pink600 50%',
-            }}
+            css={{ textGradient: '45deg, $blue600 -20%, $pink600 50%' }}
             weight="bold"
           >
             Making
@@ -72,14 +69,11 @@ const Profile = () => {
           variants={secondLine}
           initial="hidden"
           animate="show"
-          whileHover={{ scale: 1.2 }}
         >
           <Text
             h1
             size={46}
-            css={{
-              textGradient: '45deg, $purple600 -20%, $pink600 100%',
-            }}
+            css={{ textGradient: '45deg, $purple600 -20%, $pink600 100%' }}
             weight="bold"
           >
             An impact
@@ -91,14 +85,11 @@ const Profile = () => {
           variants={thirdLine}
           initial="hidden"
           animate="show"
-          whileHover={{ scale: 1.2 }}
         >
           <Text
             h1
             size={46}
-            css={{
-              textGradient: '45deg, $yellow600 -20%, $red600 100%',
-            }}
+            css={{ textGradient: '45deg, $yellow600 -20%, $red600 100%' }}
             weight="bold"
           >
             One line at a time

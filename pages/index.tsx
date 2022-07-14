@@ -5,6 +5,7 @@ import { Container, Spacer } from '@nextui-org/react';
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+// import ResumeDownload from '@/components/ResumeDownload';
 // import Nav from '@/components/Nav';
 
 const Home: NextPage = () => (
@@ -22,6 +23,7 @@ const Home: NextPage = () => (
       <Hero />
       <Spacer y={2} />
       {/* <Nav /> */}
+      {/* <ResumeDownload /> */}
     </Container>
   </>
 );
