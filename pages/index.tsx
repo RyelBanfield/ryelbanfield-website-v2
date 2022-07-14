@@ -3,10 +3,9 @@ import Head from 'next/head';
 
 import { Container, Spacer } from '@nextui-org/react';
 
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-// import ResumeDownload from '@/components/ResumeDownload';
-import Nav from '@/components/Nav';
+import AboutMe from '@/components/HomePage/AboutMe';
+import Header from '@/components/HomePage/Header';
+import Hero from '@/components/HomePage/Hero';
 
 const Home: NextPage = () => (
   <>
@@ -16,15 +15,13 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Container>
-      <Spacer y={2} />
-      <Nav />
+    <Container sm>
       <Spacer y={2} />
       <Header />
       <Spacer y={2} />
       <Hero />
       <Spacer y={2} />
-      {/* <ResumeDownload /> */}
+      <AboutMe />
     </Container>
   </>
 );

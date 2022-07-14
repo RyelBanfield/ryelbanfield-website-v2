@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { useTheme as useNextTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 
@@ -10,20 +11,21 @@ import { MoonIcon, SunIcon } from './SwitchIcons';
 const Header = () => {
   const { setTheme } = useNextTheme();
   const { isDark } = useTheme();
+  const router = useRouter();
 
   return (
     <Grid.Container>
       <Grid xs={10}>
         <User
           name="Ryel Banfield"
+          description="Full Stack Developer"
           src="/ProPic.png"
           size="xl"
           zoomed
           pointer
-          description="Full-Stack Developer"
+          onClick={() => router.push('/')}
         />
       </Grid>
-
       <Grid xs={2}>
         <Row justify="flex-end" align="center">
           <motion.div
