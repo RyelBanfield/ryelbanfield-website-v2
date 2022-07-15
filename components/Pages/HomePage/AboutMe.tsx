@@ -7,7 +7,7 @@ import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
 const AboutMe = () => {
   const techLogos = [
     '/JavaScript.png',
-    '/TypeScript.svg',
+    '/TypeScript.png',
   ];
 
   return (
