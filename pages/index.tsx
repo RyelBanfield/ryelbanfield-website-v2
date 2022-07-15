@@ -13,7 +13,7 @@ const Home: NextPage = () => (
   <>
     <Head>
       <title>Ryel Banfield</title>
-      <meta name="description" content="Ryel Banfield's Personal Website & Blog" />
+      <meta name="description" content="Ryel Banfield's Website & Blog" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
