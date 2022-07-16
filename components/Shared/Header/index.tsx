@@ -5,6 +5,8 @@ import {
   Grid, Row, Switch, User, useTheme,
 } from '@nextui-org/react';
 
+import ConfettiButton from '@/components/Pages/HomePage/ConfettiButton';
+
 import DelayedFadeIn from '../DelayedFadeIn';
 import { MoonIcon, SunIcon } from './SwitchIcons';
 
@@ -15,7 +17,7 @@ const Header = () => {
 
   return (
     <Grid.Container>
-      <Grid xs={10}>
+      <Grid xs={8}>
         <User
           name="Ryel Banfield"
           description="Full Stack Developer"
@@ -25,6 +27,13 @@ const Header = () => {
           pointer
           onClick={() => router.push('/')}
         />
+      </Grid>
+      <Grid xs={2}>
+        <Row justify="flex-end" align="center">
+          <DelayedFadeIn>
+            <ConfettiButton />
+          </DelayedFadeIn>
+        </Row>
       </Grid>
       <Grid xs={2}>
         <Row justify="flex-end" align="center">

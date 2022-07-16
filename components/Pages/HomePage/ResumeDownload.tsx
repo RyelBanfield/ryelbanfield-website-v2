@@ -1,8 +1,6 @@
 import { saveAs } from 'file-saver';
 
-import { Button, Grid } from '@nextui-org/react';
-
-import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
+import { Button } from '@nextui-org/react';
 
 const ResumeDownload = () => {
   const handleDownload = () => {
@@ -13,13 +11,7 @@ const ResumeDownload = () => {
   };
 
   return (
-    <Grid.Container>
-      <Grid xs={12} justify="center">
-        <DelayedFadeIn>
-          <Button shadow onClick={() => handleDownload()}>Resume</Button>
-        </DelayedFadeIn>
-      </Grid>
-    </Grid.Container>
+    <Button size="sm" shadow onClick={() => handleDownload()}>Resume</Button>
   );
 };
 

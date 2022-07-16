@@ -5,7 +5,6 @@ import { Container, Spacer } from '@nextui-org/react';
 
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
 import Hero from '@/components/Pages/HomePage/Hero';
-import ResumeDownload from '@/components/Pages/HomePage/ResumeDownload';
 import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 
@@ -24,8 +23,6 @@ const Home: NextPage = () => (
       <Hero />
       <Spacer y={2} />
       <AboutMe />
-      <Spacer y={2} />
-      <ResumeDownload />
       <Spacer y={2} />
       <Footer />
     </Container>

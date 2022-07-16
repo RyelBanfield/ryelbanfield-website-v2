@@ -1,14 +1,11 @@
-import {
-  Avatar, Grid, Spacer, Text,
-} from '@nextui-org/react';
+import { Avatar, Grid, Text } from '@nextui-org/react';
 
 import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
 
+import ResumeDownload from './ResumeDownload';
+
 const AboutMe = () => {
-  const techLogos = [
-    '/JavaScript.png',
-    '/TypeScript.png',
-  ];
+  const techLogos = ['/JavaScript.png', '/TypeScript.png'];
 
   return (
     <Grid.Container gap={2}>
@@ -20,11 +17,18 @@ const AboutMe = () => {
       </Grid>
       <Grid xs={6}>
         <DelayedFadeIn>
-          <Text h2 size={19}>JavaScript & TypeScript</Text>
-          <Text h2 size={19}>React, React Native & Next.js</Text>
-          <Text h2 size={19}>Node.js & MongoDB</Text>
-          <Spacer y={1} />
-          <Avatar.Group count={5}>
+          <Text h2 size={19}>Focused on Frontend</Text>
+          <Text small size={16}>JavaScript, TypeScript, React & React Native</Text>
+        </DelayedFadeIn>
+      </Grid>
+      <Grid xs={6}>
+        <DelayedFadeIn>
+          <ResumeDownload />
+        </DelayedFadeIn>
+      </Grid>
+      <Grid xs={6}>
+        <DelayedFadeIn>
+          <Avatar.Group count={2}>
             {techLogos.map((logo) => (
               <Avatar key={logo} src={logo} bordered />
             ))}
