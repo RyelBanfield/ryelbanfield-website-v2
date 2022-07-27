@@ -26,6 +26,7 @@ const Home: NextPage = () => (
       <Hero />
       <Spacer y={1} />
       <ResumeParty />
+      <Spacer y={1} />
       <Footer />
     </Container>
   </>
