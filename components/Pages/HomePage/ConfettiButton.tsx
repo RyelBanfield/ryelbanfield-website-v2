@@ -1,5 +1,6 @@
 import React from 'react';
 import confetti from 'canvas-confetti';
+import { GiPartyPopper } from 'react-icons/gi';
 
 import { Button } from '@nextui-org/react';
 
@@ -14,7 +15,12 @@ const ConfettiButton = () => {
   };
 
   return (
-    <Button auto ghost color="gradient" onClick={() => lightConfetti()}>Party</Button>
+    <Button
+      auto
+      light
+      onClick={() => lightConfetti()}
+      icon={<GiPartyPopper size={36} />}
+    />
   );
 };
 
