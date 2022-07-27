@@ -2,7 +2,7 @@ import confetti from 'canvas-confetti';
 import { saveAs } from 'file-saver';
 
 import {
-  Button, Card, Col, Grid, Row, Text,
+  Button, Card, Col, Row, Text,
 } from '@nextui-org/react';
 
 import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
