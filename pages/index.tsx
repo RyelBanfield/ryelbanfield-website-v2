@@ -5,7 +5,7 @@ import { Container, Spacer } from '@nextui-org/react';
 
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
 import Hero from '@/components/Pages/HomePage/Hero';
-import ResumeParty from '@/components/Pages/HomePage/ResumeParty';
+import ResumeParty from '@/components/Pages/HomePage/Resume';
 import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 

@@ -7,7 +7,7 @@ import {
 
 import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
 
-const ResumeParty = () => {
+const Resume = () => {
   const lightConfetti = () => {
     confetti({
       particleCount: 100,
@@ -83,8 +83,7 @@ const ResumeParty = () => {
         </Card.Footer>
       </Card>
     </DelayedFadeIn>
-
   );
 };
 
-export default ResumeParty;
+export default Resume;
