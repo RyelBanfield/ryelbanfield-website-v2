@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import {
-  Button, Card, Modal, Text, useModal,
+  Button, Card, Container, Modal, Text, useModal,
 } from '@nextui-org/react';
 
 const FullScreenModal = () => {
@@ -33,13 +33,15 @@ const FullScreenModal = () => {
           </Text>
         </Modal.Header>
         <Modal.Body>
-          <Card variant="bordered" isHoverable isPressable onPress={() => router.push('/')}>
-            <Card.Body>
-              <Text size={16}>
-                Home
-              </Text>
-            </Card.Body>
-          </Card>
+          <Container xs>
+            <Card variant="bordered" isHoverable isPressable onPress={() => router.push('/')}>
+              <Card.Body>
+                <Text size={16}>
+                  Home
+                </Text>
+              </Card.Body>
+            </Card>
+          </Container>
         </Modal.Body>
       </Modal>
     </>
