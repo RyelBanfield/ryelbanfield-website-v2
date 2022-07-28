@@ -15,9 +15,11 @@ const Header = () => {
   return (
     <Grid.Container>
       <Grid xs={6}>
-        <DelayedFadeIn>
-          <FullScreenModal />
-        </DelayedFadeIn>
+        <Row justify="flex-start" align="center">
+          <DelayedFadeIn>
+            <FullScreenModal />
+          </DelayedFadeIn>
+        </Row>
       </Grid>
       <Grid xs={6}>
         <Row justify="flex-end" align="center">

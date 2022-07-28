@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useRouter } from 'next/router';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoIosMenu } from 'react-icons/io';
 
 import {
   Button, Card, Container, Modal, Text, useModal,
@@ -16,7 +16,7 @@ const FullScreenModal = () => {
         auto
         light
         onPress={() => setVisible(true)}
-        icon={<GiHamburgerMenu size={36} />}
+        icon={<IoIosMenu size={36} />}
       />
       <Modal
         scroll
