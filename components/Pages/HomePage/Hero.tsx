@@ -14,7 +14,7 @@ const Hero = () => {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 1.5,
+          duration: 1,
         },
       },
     },
@@ -27,7 +27,7 @@ const Hero = () => {
         opacity: 1,
         x: 5,
         transition: {
-          duration: 1.5,
+          duration: 1,
         },
       },
     },
@@ -38,8 +38,8 @@ const Hero = () => {
       show: {
         opacity: 1,
         transition: {
-          delay: 1.5,
-          duration: 1.5,
+          delay: 1,
+          duration: 1,
         },
       },
     },

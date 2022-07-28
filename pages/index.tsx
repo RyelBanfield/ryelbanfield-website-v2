@@ -18,7 +18,7 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Container>
+    <Container xs>
       <Spacer y={2} />
       <Header />
       <Spacer y={1} />
