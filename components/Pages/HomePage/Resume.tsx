@@ -58,10 +58,10 @@ const Resume = () => {
         >
           <Row>
             <Col>
-              <Text color="#000" size={12}>
+              <Text size={12} weight="bold" transform="uppercase" color="#000">
                 Learn more about me.
               </Text>
-              <Text color="#000" size={12}>
+              <Text size={12} color="#000">
                 Download now.
               </Text>
             </Col>
