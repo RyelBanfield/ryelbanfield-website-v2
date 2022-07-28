@@ -26,7 +26,7 @@ const Resume = () => {
 
   return (
     <DelayedFadeIn>
-      <Card css={{ h: '400px' }} isHoverable isPressable onPress={() => lightConfetti()}>
+      <Card css={{ h: '200px' }} isHoverable isPressable onPress={() => lightConfetti()}>
         <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
           <Col>
             <Text size={12} weight="bold" transform="uppercase" color="white">
@@ -43,7 +43,7 @@ const Resume = () => {
             width="100%"
             height="100%"
             objectFit="cover"
-            alt="Card example background"
+            alt="Macbook Pro with code"
           />
         </Card.Body>
         <Card.Footer

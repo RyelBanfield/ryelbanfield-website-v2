@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import { Container, Spacer } from '@nextui-org/react';
 
+import NowPlaying from '@/components/NowPlaying';
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
 import Hero from '@/components/Pages/HomePage/Hero';
 import ResumeParty from '@/components/Pages/HomePage/Resume';
@@ -27,6 +28,7 @@ const Home: NextPage = () => (
       <Spacer y={1} />
       <ResumeParty />
       <Spacer y={1} />
+      <NowPlaying />
       <Footer />
     </Container>
   </>
