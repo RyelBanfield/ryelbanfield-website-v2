@@ -3,9 +3,9 @@ import Head from 'next/head';
 
 import { Container, Spacer } from '@nextui-org/react';
 
-import NowPlaying from '@/components/NowPlaying';
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
 import Hero from '@/components/Pages/HomePage/Hero';
+import NowPlaying from '@/components/Pages/HomePage/NowPlaying';
 import ResumeParty from '@/components/Pages/HomePage/Resume';
 import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
