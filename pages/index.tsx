@@ -29,6 +29,7 @@ const Home: NextPage = () => (
       <ResumeParty />
       <Spacer y={1} />
       <NowPlaying />
+      <Spacer y={1} />
       <Footer />
     </Container>
   </>
