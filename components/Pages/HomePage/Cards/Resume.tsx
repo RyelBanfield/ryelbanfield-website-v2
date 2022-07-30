@@ -1,4 +1,5 @@
 import { saveAs } from 'file-saver';
+import { HiOutlineDocumentText } from 'react-icons/hi';
 
 import {
   Button, Card, Col, Row, Spacer, Text,
@@ -17,7 +18,7 @@ const Resume = () => {
   return (
     <>
       <DelayedFadeIn>
-        <Card variant="bordered" css={{ h: 200 }}>
+        <Card isHoverable variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
               <Text size={12} weight="bold" transform="uppercase" color="white">Resume</Text>
@@ -53,7 +54,13 @@ const Resume = () => {
               </Col>
               <Col>
                 <Row justify="flex-end">
-                  <Button flat auto rounded color="secondary" onPress={() => handleDownload()}>
+                  <Button
+                    size="md"
+                    flat
+                    color="secondary"
+                    onPress={() => handleDownload()}
+                    iconRight={<HiOutlineDocumentText size={18} />}
+                  >
                     <Text
                       css={{ color: 'inherit' }}
                       size={12}

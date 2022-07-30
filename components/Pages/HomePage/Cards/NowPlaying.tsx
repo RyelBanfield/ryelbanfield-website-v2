@@ -1,9 +1,11 @@
+import { useRouter } from 'next/router';
 import fetcher from 'lib/fetcher';
 import { NowPlayingSong } from 'lib/types';
 import { BsSpotify } from 'react-icons/bs';
 import useSWR from 'swr';
 
 import {
+  Button,
   Card, Col, Row, Spacer, Text,
 } from '@nextui-org/react';
 
@@ -11,11 +13,12 @@ import DelayedFadeIn from '../../../Shared/DelayedFadeIn';
 
 const NowPlaying = () => {
   const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher);
+  const router = useRouter();
 
   return (
     <>
       <DelayedFadeIn>
-        <Card variant="bordered" css={{ h: 200 }}>
+        <Card isHoverable variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
               <Text size={12} weight="bold" transform="uppercase" color="white">Spotify</Text>
@@ -46,7 +49,7 @@ const NowPlaying = () => {
             <Row>
               <Col>
                 <Text size={12} weight="bold" transform="uppercase" color="#000">
-                  Listening to?
+                  See what I&apos;m listening to.
                 </Text>
                 <Text size={12} color="#000">
                   {data?.isPlaying ? `${data.artist} - ${data.title}` : 'Nothing Playing.'}
@@ -54,7 +57,22 @@ const NowPlaying = () => {
               </Col>
               <Col>
                 <Row justify="flex-end">
-                  <BsSpotify color="#1DB954" size={36} />
+                  <Button
+                    size="md"
+                    flat
+                    color="success"
+                    onPress={() => router.push('/blog')}
+                    iconRight={<BsSpotify size={18} />}
+                  >
+                    <Text
+                      css={{ color: 'inherit' }}
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                    >
+                      Top Tracks
+                    </Text>
+                  </Button>
                 </Row>
               </Col>
             </Row>

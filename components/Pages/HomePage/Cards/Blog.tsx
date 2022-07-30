@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { BsFillMarkdownFill } from 'react-icons/bs';
 
 import {
   Button, Card, Col, Row, Spacer, Text,
@@ -12,7 +13,7 @@ const Resume = () => {
   return (
     <>
       <DelayedFadeIn>
-        <Card variant="bordered" css={{ h: 200 }}>
+        <Card isHoverable variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
               <Text size={12} weight="bold" transform="uppercase" color="white">Blog</Text>
@@ -24,7 +25,7 @@ const Resume = () => {
               width="100%"
               height="100%"
               objectFit="cover"
-              alt="TypeWriter"
+              alt="A library of books"
             />
           </Card.Body>
           <Card.Footer
@@ -48,7 +49,13 @@ const Resume = () => {
               </Col>
               <Col>
                 <Row justify="flex-end">
-                  <Button flat auto rounded color="error" onPress={() => router.push('/blog')}>
+                  <Button
+                    size="md"
+                    flat
+                    color="error"
+                    onPress={() => router.push('/blog')}
+                    iconRight={<BsFillMarkdownFill size={18} />}
+                  >
                     <Text
                       css={{ color: 'inherit' }}
                       size={12}
