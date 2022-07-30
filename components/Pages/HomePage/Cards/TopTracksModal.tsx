@@ -47,7 +47,7 @@ const FullScreenModal = () => {
         <Modal.Body>
           <Container xs>
             {data?.tracks.map((track, index) => (
-              <>
+              <div key={track.title}>
                 <Card isHoverable variant="bordered" css={{ h: 250 }}>
                   <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
                     <Col>
@@ -93,7 +93,7 @@ const FullScreenModal = () => {
                   </Card.Footer>
                 </Card>
                 <Spacer />
-              </>
+              </div>
             ))}
             <Spacer y={2} />
           </Container>
