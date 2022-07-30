@@ -1,18 +1,16 @@
-import { saveAs } from 'file-saver';
+import fetcher from 'lib/fetcher';
+import { NowPlayingSong } from 'lib/types';
+import { BsSpotify } from 'react-icons/bs';
+import useSWR from 'swr';
 
 import {
-  Button, Card, Col, Row, Spacer, Text,
+  Card, Col, Row, Spacer, Text,
 } from '@nextui-org/react';
 
-import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
+import DelayedFadeIn from '../../../Shared/DelayedFadeIn';
 
-const Resume = () => {
-  const handleDownload = () => {
-    saveAs(
-      '/RyelBanfield-Resume.pdf',
-      'RyelBanfield-Resume.pdf',
-    );
-  };
+const NowPlaying = () => {
+  const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher);
 
   return (
     <>
@@ -20,16 +18,19 @@ const Resume = () => {
         <Card variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
-              <Text size={12} weight="bold" transform="uppercase" color="white">Resume</Text>
+              <Text size={12} weight="bold" transform="uppercase" color="white">Spotify</Text>
             </Col>
           </Card.Header>
           <Card.Body css={{ p: 0 }}>
             <Card.Image
-              src="/Code.jpg"
+              src={data?.isPlaying ? data.albumImageUrl : '/NowPlaying.jpg'}
               width="100%"
               height="100%"
               objectFit="cover"
-              alt="Macbook Pro with code"
+              alt="Spotify Logo"
+              css={{
+                draggable: false,
+              }}
             />
           </Card.Body>
           <Card.Footer
@@ -45,24 +46,15 @@ const Resume = () => {
             <Row>
               <Col>
                 <Text size={12} weight="bold" transform="uppercase" color="#000">
-                  Learn more.
+                  Listening to?
                 </Text>
                 <Text size={12} color="#000">
-                  Download now.
+                  {data?.isPlaying ? `${data.artist} - ${data.title}` : 'Nothing Playing.'}
                 </Text>
               </Col>
               <Col>
                 <Row justify="flex-end">
-                  <Button flat auto rounded color="secondary" onPress={() => handleDownload()}>
-                    <Text
-                      css={{ color: 'inherit' }}
-                      size={12}
-                      weight="bold"
-                      transform="uppercase"
-                    >
-                      Resume
-                    </Text>
-                  </Button>
+                  <BsSpotify color="#1DB954" size={36} />
                 </Row>
               </Col>
             </Row>
@@ -74,4 +66,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default NowPlaying;

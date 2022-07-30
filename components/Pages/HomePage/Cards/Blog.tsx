@@ -1,16 +1,13 @@
-import fetcher from 'lib/fetcher';
-import { NowPlayingSong } from 'lib/types';
-import { BsSpotify } from 'react-icons/bs';
-import useSWR from 'swr';
+import { useRouter } from 'next/router';
 
 import {
-  Card, Col, Row, Spacer, Text,
+  Button, Card, Col, Row, Spacer, Text,
 } from '@nextui-org/react';
 
-import DelayedFadeIn from '../../Shared/DelayedFadeIn';
+import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
 
-const NowPlaying = () => {
-  const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher);
+const Resume = () => {
+  const router = useRouter();
 
   return (
     <>
@@ -18,19 +15,16 @@ const NowPlaying = () => {
         <Card variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
-              <Text size={12} weight="bold" transform="uppercase" color="white">Spotify</Text>
+              <Text size={12} weight="bold" transform="uppercase" color="white">Blog</Text>
             </Col>
           </Card.Header>
           <Card.Body css={{ p: 0 }}>
             <Card.Image
-              src={data?.isPlaying ? data.albumImageUrl : '/Spotify.jpg'}
+              src="/Blog.jpg"
               width="100%"
               height="100%"
               objectFit="cover"
-              alt="Spotify Logo"
-              css={{
-                draggable: false,
-              }}
+              alt="TypeWriter"
             />
           </Card.Body>
           <Card.Footer
@@ -46,15 +40,24 @@ const NowPlaying = () => {
             <Row>
               <Col>
                 <Text size={12} weight="bold" transform="uppercase" color="#000">
-                  Listening to?
+                  Read more.
                 </Text>
                 <Text size={12} color="#000">
-                  {data?.isPlaying ? `${data.artist} - ${data.title}` : 'Nothing Playing.'}
+                  View now.
                 </Text>
               </Col>
               <Col>
                 <Row justify="flex-end">
-                  <BsSpotify color="#1DB954" size={36} />
+                  <Button flat auto rounded color="error" onPress={() => router.push('/blog')}>
+                    <Text
+                      css={{ color: 'inherit' }}
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                    >
+                      Blog
+                    </Text>
+                  </Button>
                 </Row>
               </Col>
             </Row>
@@ -66,4 +69,4 @@ const NowPlaying = () => {
   );
 };
 
-export default NowPlaying;
+export default Resume;
