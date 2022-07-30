@@ -12,8 +12,6 @@ const FullScreenModal = () => {
   const { setVisible, bindings } = useModal();
   const { data } = useSWR<TopTracks>('/api/top-tracks', fetcher);
 
-  console.log(data);
-
   return (
     <>
       <Button
