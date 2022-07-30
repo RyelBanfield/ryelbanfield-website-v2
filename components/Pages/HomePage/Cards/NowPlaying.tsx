@@ -1,19 +1,16 @@
-import { useRouter } from 'next/router';
 import fetcher from 'lib/fetcher';
 import { NowPlayingSong } from 'lib/types';
-import { BsSpotify } from 'react-icons/bs';
 import useSWR from 'swr';
 
 import {
-  Button,
   Card, Col, Row, Spacer, Text,
 } from '@nextui-org/react';
 
 import DelayedFadeIn from '../../../Shared/DelayedFadeIn';
+import TopTracksModal from './TopTracksModal';
 
 const NowPlaying = () => {
   const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher);
-  const router = useRouter();
 
   return (
     <>
@@ -57,22 +54,7 @@ const NowPlaying = () => {
               </Col>
               <Col>
                 <Row justify="flex-end">
-                  <Button
-                    size="md"
-                    flat
-                    color="success"
-                    onPress={() => router.push('/blog')}
-                    iconRight={<BsSpotify size={18} />}
-                  >
-                    <Text
-                      css={{ color: 'inherit' }}
-                      size={12}
-                      weight="bold"
-                      transform="uppercase"
-                    >
-                      Top Tracks
-                    </Text>
-                  </Button>
+                  <TopTracksModal />
                 </Row>
               </Col>
             </Row>

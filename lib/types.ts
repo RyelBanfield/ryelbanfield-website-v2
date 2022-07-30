@@ -6,3 +6,15 @@ export type NowPlayingSong = {
   songUrl: string;
   title: string;
 };
+
+export type Song = {
+  songUrl: string;
+  artist: string;
+  title: string;
+  album: string;
+  albumImageUrl: string;
+};
+
+export type TopTracks = {
+  tracks: Song[];
+};
