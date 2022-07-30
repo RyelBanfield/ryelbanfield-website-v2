@@ -95,6 +95,7 @@ const FullScreenModal = () => {
                 <Spacer />
               </>
             ))}
+            <Spacer y={2} />
           </Container>
         </Modal.Body>
       </Modal>
