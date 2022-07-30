@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import { Container, Spacer } from '@nextui-org/react';
+import { Container } from '@nextui-org/react';
 
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
-import Hero from '@/components/Pages/HomePage/Hero';
+import AnimatedText from '@/components/Pages/HomePage/AnimatedText';
 import NowPlaying from '@/components/Pages/HomePage/NowPlaying';
-import ResumeParty from '@/components/Pages/HomePage/Resume';
+import Resume from '@/components/Pages/HomePage/Resume';
 import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 
@@ -19,17 +19,11 @@ const Home: NextPage = () => (
     </Head>
 
     <Container xs>
-      <Spacer y={2} />
       <Header />
-      <Spacer y={1} />
       <AboutMe />
-      <Spacer y={1} />
-      <Hero />
-      <Spacer y={1} />
-      <ResumeParty />
-      <Spacer y={1} />
+      <AnimatedText />
+      <Resume />
       <NowPlaying />
-      <Spacer y={1} />
       <Footer />
     </Container>
   </>
