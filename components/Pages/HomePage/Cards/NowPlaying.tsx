@@ -3,7 +3,7 @@ import { NowPlayingSong } from 'lib/types';
 import useSWR from 'swr';
 
 import {
-  Card, Col, Row, Spacer, Text,
+  Card, Col, Loading, Row, Spacer, Text,
 } from '@nextui-org/react';
 
 import DelayedFadeIn from '../../../Shared/DelayedFadeIn';
@@ -17,9 +17,12 @@ const NowPlaying = () => {
       <DelayedFadeIn>
         <Card isHoverable variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
-            <Col>
-              <Text size={12} weight="bold" transform="uppercase" color="white">Spotify</Text>
-            </Col>
+            <Row css={{ alignItems: 'center' }}>
+              <Text size={12} weight="bold" transform="uppercase" color="white" css={{ paddingRight: 10 }}>
+                Spotify
+              </Text>
+              <Loading type="points" color="success" size="sm" />
+            </Row>
           </Card.Header>
           <Card.Body css={{ p: 0 }}>
             <Card.Image
