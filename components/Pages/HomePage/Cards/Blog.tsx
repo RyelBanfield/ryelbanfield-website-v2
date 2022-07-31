@@ -16,7 +16,7 @@ const Resume = () => {
         <Card isHoverable variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
-              <Text size={12} weight="bold" transform="uppercase" color="white">Blog</Text>
+              <Text size={12} weight="bold" transform="uppercase" color="white">Blog Posts</Text>
             </Col>
           </Card.Header>
           <Card.Body css={{ p: 0 }}>

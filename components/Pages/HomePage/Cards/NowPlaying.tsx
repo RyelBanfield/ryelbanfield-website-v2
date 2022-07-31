@@ -18,11 +18,13 @@ const NowPlaying = () => {
         <Card isHoverable variant="bordered" css={{ h: 200 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Row css={{ alignItems: 'center' }}>
-              <Text size={12} weight="bold" transform="uppercase" color="white" css={{ paddingRight: 10 }}>
-                Spotify
+              <Text size={12} weight="bold" transform="uppercase" color="white">
+                My Spotify
               </Text>
-              <Loading type="points" color="success" size="sm" />
             </Row>
+            {data?.isPlaying && (
+              <Loading type="points" color="success" size="sm" />
+            )}
           </Card.Header>
           <Card.Body css={{ p: 0 }}>
             <Card.Image
