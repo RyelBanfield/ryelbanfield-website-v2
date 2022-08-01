@@ -14,7 +14,7 @@ const AnimatedText = () => {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 1,
+          duration: 0.75,
         },
       },
     },
@@ -27,7 +27,7 @@ const AnimatedText = () => {
         opacity: 1,
         x: 5,
         transition: {
-          duration: 1,
+          duration: 0.75,
         },
       },
     },
@@ -38,8 +38,8 @@ const AnimatedText = () => {
       show: {
         opacity: 1,
         transition: {
-          delay: 1,
-          duration: 0.7,
+          delay: 0.75,
+          duration: 0.75,
         },
       },
     },
