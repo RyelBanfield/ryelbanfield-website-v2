@@ -5,7 +5,7 @@ import {
 } from '@nextui-org/react';
 
 import DelayedFadeIn from '../DelayedFadeIn';
-import FullScreenModal from './FullScreenModal';
+import NavModal from './NavModal';
 import { MoonIcon, SunIcon } from './SwitchIcons';
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
         <Grid xs={6}>
           <Row justify="flex-start" align="center">
             <DelayedFadeIn>
-              <FullScreenModal />
+              <NavModal />
             </DelayedFadeIn>
           </Row>
         </Grid>

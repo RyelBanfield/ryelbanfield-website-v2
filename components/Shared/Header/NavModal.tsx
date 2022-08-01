@@ -3,10 +3,21 @@ import { useRouter } from 'next/router';
 import { IoIosMenu } from 'react-icons/io';
 
 import {
-  Button, Card, Container, Modal, Text, useModal,
+  Button, Card, Container, Modal, Spacer, Text, useModal,
 } from '@nextui-org/react';
 
-const FullScreenModal = () => {
+const pages = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'Blog',
+    href: '/blog',
+  },
+];
+
+const NavModal = () => {
   const { setVisible, bindings } = useModal();
   const router = useRouter();
 
@@ -34,13 +45,23 @@ const FullScreenModal = () => {
         </Modal.Header>
         <Modal.Body>
           <Container xs>
-            <Card variant="bordered" isHoverable isPressable onPress={() => router.push('/')}>
-              <Card.Body>
-                <Text size={16}>
-                  Home
-                </Text>
-              </Card.Body>
-            </Card>
+            {pages.map((page) => {
+              if (page.href !== router.pathname) {
+                return (
+                  <>
+                    <Card key={page.title} variant="bordered" isHoverable isPressable onPress={() => router.push(page.href)}>
+                      <Card.Body>
+                        <Text size={16}>
+                          {page.title}
+                        </Text>
+                      </Card.Body>
+                    </Card>
+                    <Spacer />
+                  </>
+                );
+              }
+              return null;
+            })}
           </Container>
         </Modal.Body>
       </Modal>
@@ -48,4 +69,4 @@ const FullScreenModal = () => {
   );
 };
 
-export default FullScreenModal;
+export default NavModal;
