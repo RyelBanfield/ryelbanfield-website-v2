@@ -20,6 +20,7 @@ const FullScreenModal = () => {
         color="success"
         onPress={() => setVisible(true)}
         iconRight={<BsSpotify size={18} />}
+        css={{ width: '100%' }}
       >
         <Text
           css={{ color: 'inherit' }}

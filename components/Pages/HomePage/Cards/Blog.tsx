@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { BsFillMarkdownFill } from 'react-icons/bs';
 
 import {
-  Button, Card, Col, Row, Spacer, Text,
+  Button, Card, Col, Spacer, Text,
 } from '@nextui-org/react';
 
 import DelayedFadeIn from '@/components/Shared/DelayedFadeIn';
@@ -13,7 +13,7 @@ const Resume = () => {
   return (
     <>
       <DelayedFadeIn>
-        <Card isHoverable variant="bordered" css={{ h: 200 }}>
+        <Card isHoverable variant="bordered" css={{ h: 300 }}>
           <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
             <Col>
               <Text size={12} weight="bold" transform="uppercase" color="white">Blog Posts</Text>
@@ -38,36 +38,31 @@ const Resume = () => {
               zIndex: 1,
             }}
           >
-            <Row>
-              <Col>
-                <Text size={12} weight="bold" transform="uppercase" color="#000">
-                  Read more.
+            <Col>
+              <Text size={12} weight="bold" transform="uppercase" color="#000">
+                Read more.
+              </Text>
+              <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
+                View now.
+              </Text>
+              <Button
+                size="md"
+                flat
+                color="error"
+                onPress={() => router.push('/blog')}
+                iconRight={<BsFillMarkdownFill size={18} />}
+                css={{ width: '100%' }}
+              >
+                <Text
+                  css={{ color: 'inherit' }}
+                  size={12}
+                  weight="bold"
+                  transform="uppercase"
+                >
+                  Blog
                 </Text>
-                <Text size={12} color="#000">
-                  View now.
-                </Text>
-              </Col>
-              <Col>
-                <Row justify="flex-end">
-                  <Button
-                    size="md"
-                    flat
-                    color="error"
-                    onPress={() => router.push('/blog')}
-                    iconRight={<BsFillMarkdownFill size={18} />}
-                  >
-                    <Text
-                      css={{ color: 'inherit' }}
-                      size={12}
-                      weight="bold"
-                      transform="uppercase"
-                    >
-                      Blog
-                    </Text>
-                  </Button>
-                </Row>
-              </Col>
-            </Row>
+              </Button>
+            </Col>
           </Card.Footer>
         </Card>
       </DelayedFadeIn>
