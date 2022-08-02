@@ -8,25 +8,20 @@ import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const lightTheme = createTheme({
-    type: 'light',
-  });
+  const fonts = {
+    sans: 'IBM Plex Sans, sans-serif',
+    mono: 'IBM Plex Mono, monospace',
+  };
 
   const darkTheme = createTheme({
     type: 'dark',
+    theme: { fonts },
   });
 
   return (
-    <NextThemesProvider
-      defaultTheme="dark"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
-      }}
-    >
+    <NextThemesProvider defaultTheme="dark" attribute="class" value={{ dark: darkTheme.className }}>
       <NextUIProvider>
-        <Container xs>
+        <Container responsive>
           <Header />
           <Component {...pageProps} />
           <Footer />

@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
-import {
-  Link, Row, Spacer, Text,
-} from '@nextui-org/react';
+import { Link, Row, Text } from '@nextui-org/react';
 
 const NavLinks = () => {
   const router = useRouter();
@@ -22,15 +21,16 @@ const NavLinks = () => {
 
   return (
     <Row>
-      {pages.map((page) => (
-        <>
+      {pages.map((page, index) => (
+        <motion.div key={page.href} whileHover={{ scale: 1.2 }}>
           <NextLink href={page.href}>
             <Link>
               <Text
                 size={16}
                 weight="bold"
-                color="white"
                 css={{
+                  padding: index === 0 ? '0 1rem 0 0' : '0 1rem 0 1rem',
+                  color: router.pathname === page.href ? '#999' : '#666',
                   textDecoration: router.pathname === page.href ? 'underline' : 'none',
                 }}
               >
@@ -38,8 +38,7 @@ const NavLinks = () => {
               </Text>
             </Link>
           </NextLink>
-          <Spacer />
-        </>
+        </motion.div>
       ))}
     </Row>
   );
