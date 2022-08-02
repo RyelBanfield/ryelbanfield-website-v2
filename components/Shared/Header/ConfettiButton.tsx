@@ -1,7 +1,7 @@
 import confetti from 'canvas-confetti';
 import { motion } from 'framer-motion';
 
-import { Button } from '@nextui-org/react';
+import { Button, Text } from '@nextui-org/react';
 
 const ConfettiButton = () => {
   const lightConfetti = () => {
@@ -27,7 +27,7 @@ const ConfettiButton = () => {
           padding: 0,
         }}
       >
-        🎉
+        <Text size={18}>🎉</Text>
       </Button>
     </motion.div>
   );
