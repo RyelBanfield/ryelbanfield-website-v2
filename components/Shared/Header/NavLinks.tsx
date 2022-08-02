@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
-import { Link, Row, Text } from '@nextui-org/react';
+import { Button, Row, Text } from '@nextui-org/react';
 
 const NavLinks = () => {
   const router = useRouter();
@@ -24,9 +24,16 @@ const NavLinks = () => {
       {pages.map((page, index) => (
         <motion.div key={page.href} whileHover={{ scale: 1.2 }}>
           <NextLink href={page.href}>
-            <Link>
+            <Button
+              auto
+              light
+              animated={false}
+              css={{
+                padding: 0,
+              }}
+            >
               <Text
-                size={16}
+                size={18}
                 weight="bold"
                 css={{
                   padding: index === 0 ? '0 1rem 0 0' : '0 1rem 0 1rem',
@@ -36,7 +43,7 @@ const NavLinks = () => {
               >
                 {page.title}
               </Text>
-            </Link>
+            </Button>
           </NextLink>
         </motion.div>
       ))}
