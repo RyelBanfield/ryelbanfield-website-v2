@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { Text } from '@nextui-org/react';
 
-import articles from '../../data/posts';
+// import articles from '../../data/posts';
 
 const Blog: NextPage = () => (
   <>
@@ -14,9 +14,11 @@ const Blog: NextPage = () => (
     </Head>
 
     <Text h1>Blog</Text>
-    {articles.map((article) => (
+    {/* {articles.map((article) => (
       <Text key={article.slug}>{article.title}</Text>
-    ))}
+    ))} */}
+
+    <Text>Coming soon...</Text>
   </>
 );
 
