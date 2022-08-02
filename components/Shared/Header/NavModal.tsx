@@ -12,8 +12,8 @@ const pages = [
     href: '/',
   },
   {
-    title: 'Blog',
-    href: '/blog',
+    title: 'Posts',
+    href: '/posts',
   },
 ];
 
