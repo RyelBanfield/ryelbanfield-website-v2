@@ -12,8 +12,8 @@ const pages = [
     href: '/',
   },
   {
-    title: 'Posts',
-    href: '/posts',
+    title: 'Blog',
+    href: '/blog',
   },
 ];
 
@@ -48,8 +48,16 @@ const NavModal = () => {
             {pages.map((page) => {
               if (page.href !== router.pathname) {
                 return (
-                  <>
-                    <Card key={page.title} variant="bordered" isHoverable isPressable onPress={() => router.push(page.href)}>
+                  <div key={page.title}>
+                    <Card
+                      variant="bordered"
+                      isHoverable
+                      isPressable
+                      onPress={() => {
+                        router.push(page.href);
+                        setVisible(false);
+                      }}
+                    >
                       <Card.Body>
                         <Text size={16}>
                           {page.title}
@@ -57,7 +65,7 @@ const NavModal = () => {
                       </Card.Body>
                     </Card>
                     <Spacer />
-                  </>
+                  </div>
                 );
               }
               return null;
