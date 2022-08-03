@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { BsFillMarkdownFill } from 'react-icons/bs';
 
 import {
-  Button, Card, Col, Spacer, Text,
+  Button, Card, Col, Row, Spacer, Text,
 } from '@nextui-org/react';
 
 const Blog = () => {
@@ -10,11 +10,11 @@ const Blog = () => {
 
   return (
     <>
-      <Card isHoverable variant="bordered" css={{ h: 300 }}>
+      <Card css={{ h: 300 }}>
         <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
-          <Col>
+          <Row>
             <Text size={12} weight="bold" transform="uppercase" color="white">Blog Posts</Text>
-          </Col>
+          </Row>
         </Card.Header>
         <Card.Body css={{ p: 0 }}>
           <Card.Image
@@ -36,12 +36,16 @@ const Blog = () => {
           }}
         >
           <Col>
-            <Text size={12} weight="bold" transform="uppercase" color="#000">
-              Read more.
-            </Text>
-            <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
-              View now.
-            </Text>
+            <Row>
+              <Text size={12} weight="bold" transform="uppercase" color="#000">
+                Read more.
+              </Text>
+            </Row>
+            <Row>
+              <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
+                View now.
+              </Text>
+            </Row>
             <Button
               size="md"
               flat

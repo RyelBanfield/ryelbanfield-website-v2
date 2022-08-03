@@ -13,7 +13,7 @@ const NowPlaying = () => {
 
   return (
     <>
-      <Card isHoverable variant="bordered" css={{ h: 300 }}>
+      <Card css={{ h: 300 }}>
         <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
           <Row css={{ alignItems: 'center' }}>
             <Text size={12} weight="bold" transform="uppercase" color="white">
@@ -47,12 +47,16 @@ const NowPlaying = () => {
           }}
         >
           <Col>
-            <Text size={12} weight="bold" transform="uppercase" color="#000">
-              See what I&apos;m listening to.
-            </Text>
-            <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
-              {data?.isPlaying ? `${data.artist} - ${data.title}` : 'Nothing Playing.'}
-            </Text>
+            <Row>
+              <Text size={12} weight="bold" transform="uppercase" color="#000">
+                See what I&apos;m listening to.
+              </Text>
+            </Row>
+            <Row>
+              <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
+                {data?.isPlaying ? `${data.artist} - ${data.title}` : 'Nothing Playing.'}
+              </Text>
+            </Row>
             <TopTracksModal />
           </Col>
         </Card.Footer>

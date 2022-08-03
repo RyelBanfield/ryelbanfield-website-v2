@@ -2,7 +2,9 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-import { Container, createTheme, NextUIProvider } from '@nextui-org/react';
+import {
+  Container, createTheme, NextUIProvider, Theme,
+} from '@nextui-org/react';
 
 import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
@@ -15,15 +17,22 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     mono: 'IBM Plex Mono, monospace',
   };
 
+  const customTheme: Theme = {
+    theme: {
+      colors,
+      fonts,
+    },
+  };
+
   const darkTheme = createTheme({
+    ...customTheme,
     type: 'dark',
-    theme: { fonts, colors },
   });
 
   return (
     <NextThemesProvider defaultTheme="dark" attribute="class" value={{ dark: darkTheme.className }}>
       <NextUIProvider>
-        <Container responsive>
+        <Container xs>
           <Header />
           <Component {...pageProps} />
           <Footer />

@@ -2,7 +2,7 @@ import { saveAs } from 'file-saver';
 import { HiOutlineDocumentText } from 'react-icons/hi';
 
 import {
-  Button, Card, Col, Spacer, Text,
+  Button, Card, Col, Row, Spacer, Text,
 } from '@nextui-org/react';
 
 const Resume = () => {
@@ -15,11 +15,11 @@ const Resume = () => {
 
   return (
     <>
-      <Card isHoverable variant="bordered" css={{ h: 300 }}>
+      <Card css={{ h: 300 }}>
         <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5 }}>
-          <Col>
+          <Row>
             <Text size={12} weight="bold" transform="uppercase" color="white">Updated Resume</Text>
-          </Col>
+          </Row>
         </Card.Header>
         <Card.Body css={{ p: 0 }}>
           <Card.Image
@@ -41,12 +41,16 @@ const Resume = () => {
           }}
         >
           <Col>
-            <Text size={12} weight="bold" transform="uppercase" color="#000">
-              Learn more.
-            </Text>
-            <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
-              Download now.
-            </Text>
+            <Row>
+              <Text size={12} weight="bold" transform="uppercase" color="#000">
+                Learn more.
+              </Text>
+            </Row>
+            <Row>
+              <Text size={12} color="#000" css={{ paddingBottom: 10 }}>
+                Download now.
+              </Text>
+            </Row>
             <Button
               size="md"
               flat
