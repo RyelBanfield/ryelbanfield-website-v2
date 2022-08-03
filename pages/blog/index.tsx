@@ -13,7 +13,7 @@ const Blog: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Text h1>Blog</Text>
+    <Text h1 color="#fff">Blog</Text>
     {/* {articles.map((article) => (
       <Text key={article.slug}>{article.title}</Text>
     ))} */}

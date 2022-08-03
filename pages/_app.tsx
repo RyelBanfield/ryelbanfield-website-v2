@@ -8,6 +8,8 @@ import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const colors = { text: '#999' };
+
   const fonts = {
     sans: 'IBM Plex Sans, sans-serif',
     mono: 'IBM Plex Mono, monospace',
@@ -15,7 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const darkTheme = createTheme({
     type: 'dark',
-    theme: { fonts },
+    theme: { fonts, colors },
   });
 
   return (

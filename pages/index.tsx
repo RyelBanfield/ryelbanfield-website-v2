@@ -10,7 +10,7 @@ import Resume from '@/components/Pages/HomePage/Cards/Resume';
 const Home: NextPage = () => (
   <>
     <Head>
-      <title>Ryel Banfield - Developer</title>
+      <title>Ryel Banfield - Developer, Entrepreneur, Digital Nomad.</title>
       <meta name="description" content="Ryel Banfield's Website & Blog" />
       <link rel="icon" href="/favicon.ico" />
     </Head>

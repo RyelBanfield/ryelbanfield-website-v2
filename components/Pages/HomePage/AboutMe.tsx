@@ -11,7 +11,7 @@ const AboutMe = () => (
       <Spacer />
       <Grid xs={12}>
         <Col>
-          <Text h1 size={30}>Ryel Banfield</Text>
+          <Text h1 size={30} color="#fff">Ryel Banfield</Text>
           <Text h2 size={16}>Full Stack Developer focused on the Frontend.</Text>
         </Col>
       </Grid>
