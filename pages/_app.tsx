@@ -10,7 +10,7 @@ import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const colors = { background: '#121212' };
+  const colors = { background: '#121212', text: '#999' };
 
   const fonts = {
     sans: 'Roboto',

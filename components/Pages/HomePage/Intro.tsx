@@ -11,8 +11,8 @@ const Intro = () => (
       <Spacer />
       <Grid xs={12}>
         <Col>
-          <Text h1 size={36}>Ryel Banfield</Text>
-          <Text h2 size={18} color="#999">Full Stack Developer focused on the Frontend.</Text>
+          <Text h1 size={36} color="#FFF">Ryel Banfield</Text>
+          <Text h2 size={18}>Full Stack Developer focused on the Frontend.</Text>
         </Col>
       </Grid>
     </Grid.Container>
