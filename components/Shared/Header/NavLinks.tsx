@@ -37,7 +37,7 @@ const NavLinks = () => {
                 weight="bold"
                 css={{
                   padding: index === 0 ? '0 1rem 0 0' : '0 1rem 0 1rem',
-                  color: router.pathname === page.href ? '#fff' : '#999',
+                  color: router.pathname === page.href ? '#FFF' : '#999',
                 }}
               >
                 {page.title}

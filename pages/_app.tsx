@@ -10,11 +10,11 @@ import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const colors = { text: '#999' };
+  const colors = { background: '#121212' };
 
   const fonts = {
-    sans: 'IBM Plex Sans, sans-serif',
-    mono: 'IBM Plex Mono, monospace',
+    sans: 'Roboto',
+    mono: 'Roboto',
   };
 
   const customTheme: Theme = {
