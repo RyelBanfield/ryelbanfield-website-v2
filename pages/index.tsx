@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import { Spacer } from '@nextui-org/react';
+
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
 import AnimatedText from '@/components/Pages/HomePage/AnimatedText';
 import Cards from '@/components/Pages/HomePage/Card';
@@ -17,6 +19,7 @@ const Home: NextPage = () => (
     <Intro />
     <AnimatedText />
     <Cards />
+    <Spacer />
     <AboutMe />
   </>
 );

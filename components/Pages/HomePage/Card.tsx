@@ -7,16 +7,32 @@ import Resume from './Cards/Resume';
 
 const Cards = () => (
   <Grid.Container gap={2} css={{ padding: 0 }}>
-    <Grid xs={6}>
+    <Grid css={{
+      width: '100%',
+      '@xs': { width: '50%' },
+    }}
+    >
       <Resume />
     </Grid>
-    <Grid xs={6}>
+    <Grid css={{
+      width: '100%',
+      '@xs': { width: '50%' },
+    }}
+    >
       <Blog />
     </Grid>
-    <Grid xs={6}>
+    <Grid css={{
+      width: '100%',
+      '@xs': { width: '50%' },
+    }}
+    >
       <GitHub />
     </Grid>
-    <Grid xs={6}>
+    <Grid css={{
+      width: '100%',
+      '@xs': { width: '50%' },
+    }}
+    >
       <NowPlaying />
     </Grid>
   </Grid.Container>
