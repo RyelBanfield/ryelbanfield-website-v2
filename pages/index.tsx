@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import AboutMe from '@/components/Pages/HomePage/AboutMe';
 import AnimatedText from '@/components/Pages/HomePage/AnimatedText';
-import CardCarousel from '@/components/Pages/HomePage/CardCarousel';
+import Cards from '@/components/Pages/HomePage/Card';
 import Intro from '@/components/Pages/HomePage/Intro';
 
 const Home: NextPage = () => (
@@ -16,7 +16,7 @@ const Home: NextPage = () => (
 
     <Intro />
     <AnimatedText />
-    <CardCarousel />
+    <Cards />
     <AboutMe />
   </>
 );

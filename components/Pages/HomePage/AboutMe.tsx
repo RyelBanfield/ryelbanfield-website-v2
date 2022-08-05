@@ -1,7 +1,7 @@
 import { Collapse, Text } from '@nextui-org/react';
 
 const AboutMe = () => (
-  <Collapse.Group>
+  <Collapse.Group css={{ padding: 0 }}>
     <Collapse title="Who Am I?" expanded>
       <Text weight="medium">
         A Software Developer, Entrepreneur, and Digital Nomad.
