@@ -8,7 +8,10 @@ const Home: NextPage = () => (
       <meta name="description" content="Ryel Banfield's Website & Blog" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <h1 className="text-3xl font-bold underline ">Hello World!</h1>
+
+    <main className="h-screen w-full p-6 antialiased">
+      <h1>Hello World!</h1>
+    </main>
   </>
 );
 
