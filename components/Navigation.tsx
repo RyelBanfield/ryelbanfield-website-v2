@@ -13,7 +13,7 @@ const Navigation = () => {
       <motion.button
         whileTap={{ scale: 0.9 }}
         onClick={() => setMobileMenuActive(!mobileMenuActive)}
-        className={`${mobileMenuActive ? 'hidden' : 'block p-6'}`}
+        className={`${mobileMenuActive ? 'hidden' : 'block p-6 xs:p-8'}`}
       >
         <GiHamburgerMenu size={24} />
       </motion.button>
@@ -21,7 +21,7 @@ const Navigation = () => {
       <motion.button
         whileTap={{ scale: 0.9 }}
         onClick={() => setMobileMenuActive(!mobileMenuActive)}
-        className={`${mobileMenuActive ? 'z-50 block p-6' : 'hidden'}`}
+        className={`${mobileMenuActive ? 'z-50 block p-6 xs:p-8' : 'hidden'}`}
       >
         <CgClose size={24} />
       </motion.button>
@@ -32,12 +32,12 @@ const Navigation = () => {
         transition={{ duration: 0.5 }}
         className={`${
           mobileMenuActive
-            ? 'absolute flex h-screen w-screen justify-end bg-neutral-900'
+            ? 'absolute z-40 flex h-screen w-screen justify-end bg-neutral-900'
             : 'hidden'
         }`}
       >
         <div className="flex">
-          <ul className="flex flex-col items-end justify-center p-6">
+          <ul className="flex flex-col items-end justify-center p-6 xs:p-8">
             <li className="py-3">
               <Link href="/">
                 <a className="text-2xl">Home</a>
